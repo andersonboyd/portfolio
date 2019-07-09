@@ -1,0 +1,41 @@
+* {
+    border-style: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: overlay;
+}
+
+.wrapper{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+}
+.myphoto{
+    width: 50%;
+    height: calc(100vh - 150px);
+    border-radius: 50%;
+    background: url("../images/boydimage1.jpg") no-repeat #fff;
+    align-self: center;
+    justify-self: center;
+}
+.about{
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.lede{
+    font-size: 2rem;
+}
+
+.clearfix{
+    clear: both;
+}
+
