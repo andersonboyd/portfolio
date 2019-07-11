@@ -41,3 +41,25 @@ body {
     clear: both;
 }
 
+.descSpan{
+    background-color: #00000070;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+
+.buildLink{
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #007bff;
+    border-radius: 10px;
+    color: white;
+}
+
+.buildLink:hover{
+    background-color: #0056b3;
+}
+
