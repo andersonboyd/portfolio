@@ -1,24 +1,109 @@
-* {
-    border-style: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    overflow-y: overlay;
+    margin: 0;
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper{
+#navbar {
+    overflow: hidden;
+    background-color: #333333;
+    height: 6vh;
+    padding: 0;
+}
+
+#navbar a{
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    align-self: center;
+}
+
+#navbar a:hover {
+    background-color: royalblue;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: calc(100vh - 50px);
+}
+
+.wrapper {
+    height: 110vh;
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+.sticky + .wrapper {
+    padding-top: 60px;
+}
+
+.section {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.parallax::after {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-0.75px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    background: gainsboro;
+}
+
+.bg1::after {
+    background-image: url("../images/IMG_0196.JPG");
+    object-fit: cover;
+}
+
+.bg2::after {
+    background-image: url("../images/IMG_0659.JPG");
+    object-fit: cover;
+}
+
+.bg3::after {
+    background-image: url("../images/IMG_0874.JPG");
+    object-fit: cover;
+}
+
+.bg4::after {
+    background-image: url("../images/IMG_0664.JPG");
+    object-fit: fill;
+}
+
+#wrap{
+    width: 90%;
+    /* height: calc(100vh - 50px); */
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     text-align: center;
 }
-.myphoto{
+#myphoto{
     width: 470px;
     height: 470px;
     border-radius: 50%;
@@ -26,12 +111,13 @@ body {
     align-self: center;
     justify-self: center;
 }
-.about{
+#me{
     margin-bottom: 10px;
     align-self: center;
+    font-size: 3rem;
 }
 
-.lede{
+#lede{
     font-size: 2rem;
 }
 
@@ -39,7 +125,7 @@ body {
     clear: both;
 }
 
-.descSpan{
+/* .descSpan{
     background-color: #00000070;
     padding: 5px;
     color: white;
@@ -59,10 +145,97 @@ body {
 
 .buildLink:hover{
     background-color: #0056b3;
+} */
+
+.about, .portfolio, .contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .15fr;
+}
+
+#about h2, #portfolio h2, #contact h2 {
+    display: block;
+    align-self: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+#work {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.build-box {
+    height: 45%;
+    width: 90%;
+    flex-basis: 25vw;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    background-color: #80AE86;
+    padding: 5px;
+    margin: 0px 10px;
+}
+
+.build-box p {
+    font-size: 14px;
+}
+
+#build-photo-1 {
+    height: 100%;
+    width: 100%;
+    background: url("../images/538scrape.PNG");
+    object-fit: contain;
+}
+
+#build-photo-2 {
+    height: 100%;
+    width: 100%;
+    background: url("../images/538scrape.PNG");
+}
+
+#build-photo-3 {
+    height: 100%;
+    width: 100%;
+    background: url("../images/538scrape.PNG") no-repeat center;
+    background-size: cover;
+}
+
+#build-photo-4 {
+    height: 100%;
+    max-width: 100%;
+    background: url("../images/clicky.PNG") center;
+    background-size: cover;
+}
+
+#build-info-1 {
+    height: 50%;
+    width: 100%;
+}
+
+#build-info-2 {
+    height: 50%;
+    width: 100%;
+}
+
+#build-info-3 {
+    height: 50%;
+    width: 100%;
+}
+
+#build-info-4 {
+    height: 50%;
+    width: 100%;
 }
 
 .contactForm {
     width: 90%;
+    height: 75%;
     margin: 0 auto;
     padding: 2%;
     background-color: #ffffff;
@@ -70,9 +243,56 @@ body {
     flex: 1 0 auto;
 }
 
+.form-group {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
+    display: block;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    border: 1.5px solid #ccc;
+    height: 25px;
+    width: 90%;
+}
+
+.form-group textarea {
+    height: 120px;
+    width: 90%;
+    padding: 12px 20px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+button {
+    position: relative;
+    left: 1%;
+    border-radius: 2px;
+}
+
+.footer {
+    height: 10vh;
+    border-top: royalblue 1px;
+    background-color: #333333;
+}
+
 @media only screen and (max-width: 800px){
-    .wrapper{
+    #wrap{
         grid-template-columns: 1fr;
         grid-template-rows: 0.3fr 1fr;
+    }
+    #myphoto{
+        height: 230px;
+        width: 230px;
+        background: url("../images/boydimage1.jpg") no-repeat center #fff;
+    }
+    #me{
+        font-size: 1.5rem;
     }
 }
