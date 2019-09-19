@@ -180,6 +180,7 @@ body {
     background-color: #80AE86;
     padding: 5px;
     margin: 0px 10px;
+    text-align: center;
 }
 
 .build-box p {
@@ -188,20 +189,21 @@ body {
 
 #build-photo-1 {
     height: 100%;
-    width: 100%;
-    background: url("../images/538scrape.PNG");
-    object-fit: contain;
+    max-width: 100%;
+    background: url("../images/plantpal.PNG") no-repeat center;
+    background-size: cover;
 }
 
 #build-photo-2 {
     height: 100%;
-    width: 100%;
-    background: url("../images/538scrape.PNG");
+    max-width: 100%;
+    background: url("../images/tradex.PNG") no-repeat center;
+    background-size: cover;
 }
 
 #build-photo-3 {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     background: url("../images/538scrape.PNG") no-repeat center;
     background-size: cover;
 }
@@ -209,7 +211,21 @@ body {
 #build-photo-4 {
     height: 100%;
     max-width: 100%;
-    background: url("../images/clicky.PNG") center;
+    background: url("../images/clicky.PNG") no-repeat center;
+    background-size: cover;
+}
+
+#build-photo-5 {
+    height: 100%;
+    max-width: 100%;
+    background: url("../images/triviaGame.PNG") no-repeat center;
+    background-size: cover;
+}
+
+#build-photo-6 {
+    height: 100%;
+    max-width: 100%;
+    background: url("../images/giphySearch.PNG") no-repeat center;
     background-size: cover;
 }
 
@@ -261,7 +277,7 @@ label {
 }
 
 .form-group textarea {
-    height: 120px;
+    height: 220px;
     width: 90%;
     padding: 12px 20px;
     border: 1.5px solid #ccc;
