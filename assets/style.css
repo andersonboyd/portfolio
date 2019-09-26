@@ -251,6 +251,16 @@ body {
     width: 100%;
 }
 
+#build-info-5 {
+    height: 50%;
+    width: 100%;
+}
+
+#build-info-6 {
+    height: 50%;
+    width: 100%;
+}
+
 .contactForm {
     width: 90%;
     height: 75%;
@@ -312,5 +322,23 @@ button {
     }
     #me{
         font-size: 1.5rem;
+    }
+    #wrap {
+        align-items: baseline;
+        align-content: space-between;
+    }
+    .build-box {
+        height: calc(45% - 15vh);
+        flex-basis: 15vw;
+        order: 1;
+        grid-template-rows: 0.5fr;
+        grid-template-columns: 0.5fr;
+        margin: 0px 5px;
+    }
+    .build-box h3 {
+        font-size: 0.75rem;
+    }
+    .build-box p {
+        font-size: 8px;
     }
 }
