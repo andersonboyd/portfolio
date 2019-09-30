@@ -6,23 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Full name no caps</title>
-  <!-- test css/favicon links 
+  <!-- test css/favicon links  -->
   <link rel="icon" type="image/x-icon" href="../portfolio/images/favicon.ico">
   <link rel="icon" type="text/css" href="../portfolio/assets/reset.css">
-  <link rel="stylesheet" type="text/css" href="../portfolio/assets/style.css"> -->
-  <!-- deployed css/favicon links -->
+  <link rel="stylesheet" type="text/css" href="../portfolio/assets/style.css">
+  <!-- deployed css/favicon links 
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="icon" type="text/css" href="/assets/reset.css">
-  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"> -->
 </head>
 
 <body>
+  <!-- mobile div is for mobile browsers that ignore overflow in body/html tags -->
+  <div class="mobile">
   <nav id="navbar">
     <a href="https://www.linkedin.com/in/andersonswaimboyd">linkedin</a>
     <a href="https://github.com/andersonboyd">github</a>
-    <!-- <a href="contact">contact</a>
-    <a href="portfolio">builds</a> -->
-    <!-- <a href="#about">about me</a> -->
   </nav>
   <div class="wrapper">
     <section class="section parallax static intro">
@@ -32,8 +31,7 @@
           <h1 id="greeting">Hi, I'm Anderson</h1>
           <p id="lede">
             <span class="txt-rotate" data-period="100" data-rotate='["I make MERN stacks.", 
-                    "Native Texan with a background in journalism.",
-                    "I also shot all background photos used on this site.", 
+                    "Native Texan with a background in journalism.", 
                     "HTML/CSS, JS/JQ, Node, Express, MySQL, MongoDB, React", 
                     "Photoshop, Illustrator, inDesign, inCopy, Premier"]'></span>
           </p>
@@ -42,7 +40,8 @@
       </div>
     </section>
     <section class="section parallax bg1"></section>
-    <!-- <section class="section parallax static about">
+    <!-- still unsure whether this is necessary
+      <section class="section parallax static about">
       <a name="about" id="about"><h2>about me</h2></a>
       <div id="graf">
         
@@ -135,6 +134,7 @@
     <!-- <section class="section parallax bg4"></section> -->
   </div>
   <!-- <footer class="footer"></footer> -->
+  </div>
   <script>
     var TxtRotate = function (el, toRotate, period) {
       this.toRotate = toRotate;

@@ -291,18 +291,11 @@ button {
 }
 
 @media only screen and (max-width: 800px){
-    .bg1::after {
+    .mobile{
+        overflow-y: hidden;
+    }
+    .bg1::after, .bg2::after, .bg3::after {
         background-image: url("../images/IMG_0659.JPG");
-        object-fit: cover;
-    }
-    
-    .bg2::after {
-        background-image: url("../images/IMG_0663.JPG");
-        object-fit: cover;
-    }
-    
-    .bg3::after {
-        background-image: url("../images/IMG_0664.JPG");
         object-fit: cover;
     }
     #wrap{
