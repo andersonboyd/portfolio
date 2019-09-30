@@ -125,28 +125,6 @@ body {
     clear: both;
 }
 
-/* .descSpan{
-    background-color: #00000070;
-    padding: 5px;
-    color: white;
-    border-radius: 10px;
-}
-
-.buildLink{
-    margin-left: 37.5%;
-    margin-right: 37.5%;
-    padding: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #007bff;
-    border-radius: 10px;
-    color: white;
-}
-
-.buildLink:hover{
-    background-color: #0056b3;
-} */
-
 .about, .portfolio, .contact {
     display: grid;
     grid-template-columns: 1fr;
@@ -260,7 +238,9 @@ body {
     height: 50%;
     width: 100%;
 }
-
+#portfolio, #contact {
+    font-size: 1.5rem;
+}
 .contactForm {
     width: 90%;
     height: 75%;
@@ -311,14 +291,28 @@ button {
 }
 
 @media only screen and (max-width: 800px){
+    .bg1::after {
+        background-image: url("../images/IMG_0659.JPG");
+        object-fit: cover;
+    }
+    
+    .bg2::after {
+        background-image: url("../images/IMG_0663.JPG");
+        object-fit: cover;
+    }
+    
+    .bg3::after {
+        background-image: url("../images/IMG_0664.JPG");
+        object-fit: cover;
+    }
     #wrap{
         grid-template-columns: 1fr;
         grid-template-rows: 0.3fr 1fr;
     }
     #myphoto{
-        height: 230px;
-        width: 230px;
-        background: url("../images/boydimage1.jpg") no-repeat center #fff;
+        height: 42vh;
+        width: 90vw;
+        background: url("../images/boydimage1.jpg") no-repeat center left 25% #fff;
     }
     #me{
         font-size: 1.5rem;
@@ -327,18 +321,41 @@ button {
         align-items: baseline;
         align-content: space-between;
     }
+    #work {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px 5px;
+        justify-content: space-around;
+        align-content: center;
+    }
     .build-box {
-        height: calc(45% - 15vh);
-        flex-basis: 15vw;
-        order: 1;
-        grid-template-rows: 0.5fr;
-        grid-template-columns: 0.5fr;
+        height: 80%;
+        width: 90%;
         margin: 0px 5px;
     }
     .build-box h3 {
         font-size: 0.75rem;
     }
     .build-box p {
-        font-size: 8px;
+        font-size: 10px;
+    }
+    .contact {
+        max-height: 100%;
+    }
+    #contact {
+        font-size: 0.75rem;
+    }
+    .contactForm {
+        max-width: 75%;
+        height: 90%;
+    }
+    .form-group {
+        max-width: 90%;
+    }
+    .form-group textarea {
+        height: 18vh;
+        max-width: 65%;
+        margin: 0 auto;
     }
 }
